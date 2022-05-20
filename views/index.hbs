@@ -1,0 +1,60 @@
+{{> header }}
+
+<section class="container">
+    <div class="card mt-5 mb-3 shadow">
+        <div class="card-body ">
+            <h1 class="h3 text-success">
+                Workspace editing images
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form class="border p-4 rounded shadow" action="api/update-image" method="GET">
+                <h2>Image informations</h2>
+                <hr>
+                {{#if error}}
+                <div class="alert alert-danger">
+                    {{error}}
+                </div>
+                {{/if}}
+                <div class="mb-3">
+                    <div class="col-4">
+                        <img class="img-fluid" id="showImage"
+                            src="https://via.placeholder.com/700x300.png?text=Choose image from gallery"
+                            alt="image-gallery">
+                    </div>
+                    <label for="image-name" class="form-label">Choose image</label>
+                    <select class="form-select" name="imageName" id="selectImage">
+                        <option disabled selected>select image</option>
+                        {{#if files}}
+                        {{#each files }}
+                        <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                        {{else}}
+                        <option value=" ">No images</option>
+                        {{/if}}
+                    </select>
+                    <div id="image" class="form-text">Choose image from gallery</div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="width" class="form-label">Image wigt</label>
+                        <input type="number" class="form-control" id="width" name="width">
+                    </div>
+                    <div class="col">
+                        <label for="hight" class="form-label">Image hight</label>
+                        <input type="number" class="form-control" id="hight" name="hight">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        {{!-- <img src="assets/images/full-size/{{imageSrc}}" alt="{{imageSrc}}"> --}}
+    </div>
+</section>
+
+{{> footer }}
