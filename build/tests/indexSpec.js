@@ -39,4 +39,10 @@ describe('Testing endpoints responses', function () {
             expect(response.status).toEqual(404);
         });
     });
+    it('5.API endpint ', function () {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield (0, supertest_1.default)(index_1.default).get('/api/update-image?imageName=img_2.jpg&width=more&hight=500');
+            expect(response.status).toEqual(303);
+        });
+    });
 });

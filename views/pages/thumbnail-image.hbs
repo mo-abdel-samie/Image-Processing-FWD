@@ -10,25 +10,25 @@
     </div>
     <div class="row">
         {{#if files}}
-            {{#each files }}
-            <div class="col-md-3">
-                <div class="card shadow">
-                    <img src="assets/images/thumbnails/{{this}}" class="card-img-top" alt="{{this}}">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">{{this}}</h5>
-                        <a href="#" class="btn rounded-pill btn-success">Download</a>
-                    </div>
+        {{#each files }}
+        <div class="col-md-3">
+            <div class="card shadow">
+                <img src="assets/images/thumbnails/{{this}}" class="card-img-top" alt="{{this}}">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">{{this}}</h5>
+                    {{!-- <a href="#" class="btn rounded-pill btn-success">Download</a> --}}
                 </div>
             </div>
-            {{/each}}
+        </div>
+        {{/each}}
         {{else}}
-            <div class="col-12">
-                <div class=" card">
-                    <div class="card-body alert-success text-center">
-                        No images yet!
-                    </div>
+        <div class="col-12">
+            <div class=" card">
+                <div class="card-body alert-success text-center">
+                    No images yet!
                 </div>
             </div>
+        </div>
         {{/if}}
     </div>
 </section>

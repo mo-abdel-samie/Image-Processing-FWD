@@ -18,4 +18,11 @@ describe('Testing endpoints responses', function () {
     const response = await supertest(app).get('/any');
     expect(response.status).toEqual(404);
   });
+
+  it('5.API endpint ', async function () {
+    const response = await supertest(app).get(
+      '/api/update-image?imageName=img_2.jpg&width=more&hight=500'
+    );
+    expect(response.status).toEqual(303);
+  });
 });

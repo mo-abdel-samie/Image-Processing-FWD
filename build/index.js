@@ -21,5 +21,5 @@ app.use('/api', api_route_1.default);
 app.use('/*', (req, res) => {
     res.status(404).render('pages/notFound');
 });
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`App listening on port http://localhost:${port} !`));
 exports.default = app;
