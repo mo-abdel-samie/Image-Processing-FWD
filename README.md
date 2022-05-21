@@ -24,5 +24,6 @@ The first project at advanced web development track at FWD
 - prettier
 - eslint
 
-
-
+4. Proseccing API  
+```bash
+http://localhost:3000/api/update-image?imageName=img_1.jpg&width=200&hight=200  
